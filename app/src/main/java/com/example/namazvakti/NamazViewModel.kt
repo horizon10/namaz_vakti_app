@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 class NamazViewModel : ViewModel() {
 
     private val apiService = NamazApiService.create()
-    private val apiKey = "apikey 2lZJ3FiV9nF9jM25CSTVr6:7A765tgBaVkq3OrRfMxdFW" // Buraya kendi API anahtarını ekle
+    private val apiKey = "" // Buraya kendi API anahtarını ekle
 
     // Namaz vakitlerini bir liste olarak tutuyoruz
     private val _namazVakitleri = MutableLiveData<List<NamazVakti>?>()

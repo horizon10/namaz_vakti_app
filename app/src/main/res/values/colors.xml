@@ -9,7 +9,7 @@
     <color name="dark_gray">#121212</color>
     <color name="blue">#2196F3</color>
     <color name="gold">#FFD700</color>
-
+    <color name="button_background_color">#FF6200EE</color>
         <color name="text_color">#2D3748</color>
         <color name="primary_color">#4A5568</color>
         <color name="background_start">#F5F7FA</color>

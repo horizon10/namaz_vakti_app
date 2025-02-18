@@ -7,28 +7,71 @@
     android:padding="16dp"
     android:background="@color/background_color">
 
+    <!-- City Name Header -->
     <TextView
-        android:id="@+id/txtNamazVakitleri"
+        android:id="@+id/txtCityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Namaz vakitleri yükleniyor..."
-        android:textSize="18sp"
+        android:text="İstanbul"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:padding="8dp"
-        android:background="@drawable/textview_background"
         android:textColor="@color/text_color"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- Countdown Display (Larger and Bold) -->
+    <TextView
+        android:id="@+id/txtCountdown"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Bir sonraki namaza kalan süre: 00:00:00"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/textview_background"
+        android:textColor="@color/text_color"
+        app:layout_constraintTop_toBottomOf="@id/txtCityName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"/>
+
+    <!-- Prayer Times Display (Centered and Styled) -->
+    <TextView
+        android:id="@+id/txtNamazVakitleri"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Namaz saatleri yükleniyor..."
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/textview_background"
+        android:textColor="@color/text_color"
+        app:layout_constraintTop_toBottomOf="@id/txtCountdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"/>
+
+    <!-- Change City Button (Styled and Centered) -->
     <Button
         android:id="@+id/btnChangeCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Şehri Değiştir"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
         android:backgroundTint="@color/button_color"
         android:textColor="@color/button_text_color"
+        android:elevation="4dp"
+        android:background="@drawable/button_background"
         app:layout_constraintTop_toBottomOf="@id/txtNamazVakitleri"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Spinner
 import androidx.activity.ComponentActivity
+import java.util.Locale
 
 class CitySelectionActivity : ComponentActivity() {
 
@@ -42,10 +43,16 @@ class CitySelectionActivity : ComponentActivity() {
         }
 
         btnSelectCity.setOnClickListener {
-            val selectedCity = citySpinner.selectedItem.toString()
-
+            val selectedCity=citySpinner.selectedItem.toString()
             with(sharedPreferences.edit()) {
                 putString("selected_city", selectedCity)
+                apply()
+            }
+            // Türkçe karakterleri ve tüm harfleri küçük yapmak
+            val selectedCityConventer = convertToLowercaseWithTurkishCharacters(selectedCity)
+
+            with(sharedPreferences.edit()) {
+                putString("selected_city_conventer", selectedCityConventer)
                 apply()
             }
 
@@ -57,6 +64,7 @@ class CitySelectionActivity : ComponentActivity() {
             startActivity(intent)
             finish()
         }
+
 
 
     }
@@ -72,6 +80,26 @@ class CitySelectionActivity : ComponentActivity() {
             }
             sendBroadcast(intent)
         }
+    }
+    fun convertToLowercaseWithTurkishCharacters(input: String): String {
+        val turkishCharsMap = mapOf(
+            'ı' to 'i',
+            'İ' to 'i',
+            'ğ' to 'g',
+            'Ğ' to 'g',
+            'ş' to 's',
+            'Ş' to 's',
+            'ü' to 'u',
+            'Ü' to 'u',
+            'ö' to 'o',
+            'Ö' to 'o',
+            'ç' to 'c',
+            'Ç' to 'c'
+        )
+
+        return input.toLowerCase(Locale("tr"))
+            .map { turkishCharsMap[it] ?: it }  // Türkçe harf dönüşümünü uygula
+            .joinToString("")
     }
 
 

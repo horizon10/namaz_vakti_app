@@ -32,9 +32,11 @@ class NamazWidgetProvider : AppWidgetProvider() {
 
     private fun updateWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int) {
         val sharedPreferences = context.getSharedPreferences("NamazAppPrefs", Context.MODE_PRIVATE)
-        val namazVakitleri = sharedPreferences.getString("NamazVakitleri", "Veri alınamadı")
+        val namazVakitleri = sharedPreferences.getString("WidgetVakitleri", "vakitler alınamadı")
+        val sehir = sharedPreferences.getString("sehir","sehir bilgisi alınamadı")
 
         val remoteViews = RemoteViews(context.packageName, R.layout.widget_namaz)
+        remoteViews.setTextViewText(R.id.widgetCityName,sehir)
         remoteViews.setTextViewText(R.id.widgetNamazVakitleri, namazVakitleri)
 
         // Widget'a tıklandığında ana uygulamayı aç
