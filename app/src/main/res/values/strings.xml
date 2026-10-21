@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Namaz Vakti</string>
+    <string name="widget_label">Namaz Vakti</string>
+    <string name="widget_description">Sıradaki vakte kalan süre ve günün tüm vakitleri.</string>
+</resources>

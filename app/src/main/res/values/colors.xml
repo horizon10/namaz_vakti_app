@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Koyu lacivert + tok sarı -->
+    <color name="gold">#F5B82E</color>
+    <color name="navy_bg">#0A1128</color>
+    <color name="navy_card">#121C3D</color>
+    <color name="navy_card_light">#1C2A57</color>
+    <color name="navy_outline">#34457A</color>
+    <color name="widget_text">#FFFFFF</color>
+    <color name="widget_text_secondary">#9FB0D6</color>
+    <color name="ic_bg">#0A1128</color>
+</resources>

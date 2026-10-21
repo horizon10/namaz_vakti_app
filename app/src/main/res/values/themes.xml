@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NamazVakti" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/gold</item>
+        <item name="colorOnPrimary">@color/navy_bg</item>
+        <item name="colorSecondary">@color/gold</item>
+        <item name="colorOnSecondary">@color/navy_bg</item>
+        <item name="colorSecondaryContainer">@color/navy_card_light</item>
+        <item name="colorOnSecondaryContainer">@color/widget_text</item>
+        <item name="colorSurface">@color/navy_card</item>
+        <item name="colorOnSurface">@color/widget_text</item>
+        <item name="colorOutline">@color/navy_outline</item>
+        <item name="android:windowBackground">@color/navy_bg</item>
+        <item name="android:statusBarColor">@color/navy_bg</item>
+        <item name="android:navigationBarColor">@color/navy_bg</item>
+        <item name="android:textColorPrimary">@color/widget_text</item>
+        <item name="android:textColorSecondary">@color/widget_text_secondary</item>
+    </style>
+</resources>
